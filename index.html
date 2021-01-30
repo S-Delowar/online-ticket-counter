@@ -112,45 +112,38 @@
 
         const firstClassTicketIncreaseBtn = document.getElementById("firstClass-ticket-increase");
         firstClassTicketIncreaseBtn.addEventListener('click', function(){
-
             itemNumberIncrease("firstClass-ticket-count");
-
-         const ticket1TotalPrice = ticketTotalPrice("firstClass-ticket-count", 150);
-         document.getElementById("firstClass-ticket-price").innerText = ticket1TotalPrice;
-
-         subTotalUpdate("economy-ticket-price", ticket1TotalPrice, "sub-total");
-         vatAndTotalUpdate("vat", "sub-total", "total");
+            const ticket1TotalPrice = ticketTotalPrice("firstClass-ticket-count", 150);
+            document.getElementById("firstClass-ticket-price").innerText = ticket1TotalPrice;
+            subTotalUpdate("economy-ticket-price", ticket1TotalPrice, "sub-total");
+            vatAndTotalUpdate("vat", "sub-total", "total");
         })
 
         const firstClassTicketDecreaseBtn = document.getElementById("firstClass-ticket-decrease");
         firstClassTicketDecreaseBtn.addEventListener('click', function(){
             itemNumberReduce("firstClass-ticket-count");
-          const ticket1TotalPrice = ticketTotalPrice("firstClass-ticket-count", 150);
-         document.getElementById("firstClass-ticket-price").innerText = ticket1TotalPrice;
-
-         subTotalUpdate("economy-ticket-price", ticket1TotalPrice, "sub-total");
-         vatAndTotalUpdate("vat", "sub-total", "total");
+            const ticket1TotalPrice = ticketTotalPrice("firstClass-ticket-count", 150);
+            document.getElementById("firstClass-ticket-price").innerText = ticket1TotalPrice;
+            subTotalUpdate("economy-ticket-price", ticket1TotalPrice, "sub-total");
+            vatAndTotalUpdate("vat", "sub-total", "total");
         })
 
         const economyClassTicketIncreaseBtn = document.getElementById("economyClass-ticket-increase");
         economyClassTicketIncreaseBtn.addEventListener('click', function(){
-
             itemNumberIncrease("economyClass-ticket-count");
-         const ticket2TotalPrice = ticketTotalPrice("economyClass-ticket-count", 100);
-         document.getElementById("economy-ticket-price").innerText = ticket2TotalPrice;
-
-         subTotalUpdate("firstClass-ticket-price", ticket2TotalPrice, "sub-total");
-         vatAndTotalUpdate("vat", "sub-total", "total");
+            const ticket2TotalPrice = ticketTotalPrice("economyClass-ticket-count", 100);
+            document.getElementById("economy-ticket-price").innerText = ticket2TotalPrice;
+            subTotalUpdate("firstClass-ticket-price", ticket2TotalPrice, "sub-total");
+            vatAndTotalUpdate("vat", "sub-total", "total");
         })
 
         const economyClassTicketDecreaseBtn = document.getElementById("economyClass-ticket-decrease");
         economyClassTicketDecreaseBtn.addEventListener('click', function(){
             itemNumberReduce("economyClass-ticket-count");
             const ticket2TotalPrice = ticketTotalPrice("economyClass-ticket-count", 100);
-         document.getElementById("economy-ticket-price").innerText = ticket2TotalPrice;
-
-         subTotalUpdate("firstClass-ticket-price", ticket2TotalPrice, "sub-total");
-         vatAndTotalUpdate("vat", "sub-total", "total");
+            document.getElementById("economy-ticket-price").innerText = ticket2TotalPrice;
+            subTotalUpdate("firstClass-ticket-price", ticket2TotalPrice, "sub-total");
+            vatAndTotalUpdate("vat", "sub-total", "total");
         })
 
         const bookNowButton = document.getElementById("book-now-btn");
@@ -166,9 +159,9 @@
         })
 
         function itemNumberIncrease(id){
-         const itemNumber = document.getElementById(id).value;
-         const itemNum = parseFloat(itemNumber);
-         const totalItemNumber = itemNum + 1;
+            const itemNumber = document.getElementById(id).value;
+            const itemNum = parseFloat(itemNumber);
+            const totalItemNumber = itemNum + 1;
          if(totalItemNumber>0){
             document.getElementById(id).value = totalItemNumber;
             return totalItemNumber;
