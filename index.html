@@ -148,7 +148,7 @@
 
         const bookNowButton = document.getElementById("book-now-btn");
         bookNowButton.addEventListener('click', function(){
-            const total = document.getElementById("total");
+            const total = document.getElementById("total").innerText;
             const totalAmount = parseFloat(total);
             if(totalAmount > 0){
                 alert("Thank you. You have successfully booked your tickets!")
